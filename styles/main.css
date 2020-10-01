@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url(https://picsum.photos/id/119/3264/2176);
+  background-image: url(https://i.picsum.photos/id/1073/5472/3648.jpg?hmac=xCDetU9pLnLGZopbvHOQOkQRhTiYwyrzWc0YyHPzp5Y);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-
+  align-items: center;
   width: 100%;
 }
 
@@ -26,6 +26,7 @@ body {
   padding: 30px 5px 20px 5px;
   line-height: 1.2;
   background-color: rgba(212, 99, 179, 0.4);
+  width: 100%;
 }
 
 #title {
@@ -103,4 +104,26 @@ button {
   font-family: "Roboto", sans-serif;
   color: white;
   font-size: 15px;
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    background: none;
+  }
+
+  .container {
+    background-color: rgba(212, 99, 179, 0.4);
+  }
+
+  #survey-form {
+    width: 95%;
+    border-radius: 0.25rem;
+    padding: 30px 50px 30px 50px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  #survey-form {
+    width: 50%;
+  }
 }
