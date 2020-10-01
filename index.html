@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <form id="survey-form" action="#">
+        <label for="name" id="name-label" class="label">Name</label>
+        <input
+          class="input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+          oninvalid="setCustomValidity('Tell us your name!')"
+          oninput="setCustomValidity('')"
+        />
+        <label for="email" id="email-label" class="label">Email</label>
+        <input
+          class="input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your Email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          oninvalid="setCustomValidity('Please insert a correct email format')"
+          oninput="setCustomValidity('')"
+        />
+        <label for="number" id="number-label" class="label"
+          >Age<span class="clue"> (optional)</span></label
+        >
+        <input
+          class="input"
+          type="number"
+          id="number"
+          name="age"
+          placeholder="Enter your Age"
+          min="10"
+          max="99"
+          oninvalid="setCustomValidity('Please insert a value included between 10 and 99')"
+          oninput="setCustomValidity('')"
+        />
+        <span class="label">
+          Which option best describes your current role?</span
+        >
+        <select
+          id="dropdown"
+          name="role"
+          required
+          oninvalid="setCustomValidity('Please select an element from the list')"
+          oninput="setCustomValidity('')"
+        >
+          <option disabled selected value>Select current role</option>
+          <option value="student">Student</option>
+          <option value="job">Full time job</option>
+          <option value="learner">Full time learner</option>
+          <option value="prefer-no">Prefer no to say</option>
+          <option value="other">Other</option>
+        </select>
+        <span class="label">Would you recomend freeCodeCamp to a friend?</span>
+        <div class="form-section">
+          <input type="radio" value="definetly" name="user-recomend" checked />
+          <label for="definetly">Definetly</label>
+        </div>
+        <div class="form-section">
+          <input type="radio" name="user-recomend" value="maybe" />
+          <label for="maybe">Maybe</label>
+        </div>
+        <div class="form-section">
+          <input type="radio" name="user-recomend" value="not-sure" />
+          <label for="notsure">Not sure</label>
+        </div>
+        <span class="label">
+          What is your favorite feature of freeCodeCamp?</span
+        >
+        <select
+          id="dropdown"
+          name="feature"
+          required
+          oninvalid="setCustomValidity('Please select an element from the list')"
+          oninput="setCustomValidity('')"
+        >
+          <option disabled selected value>Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="open-source">Open source</option>
+        </select>
+
+        <span class="label"
+          >What would you like to seen improved<span class="clue">
+            (Check all that apply)</span
+          >
+        </span>
+        <div class="form-section">
+          <input type="checkbox" value="front-end" name="user-improve" />
+          <label for="font-end">Front-end Projects</label>
+        </div>
+        <div class="form-section">
+          <input type="checkbox" name="user-improve" value="back-end" />
+          <label for="back-end">Back-end Project</label>
+        </div>
+        <div class="form-section">
+          <input type="checkbox" name="user-improve" value="visualization" />
+          <label for="visualization">Data visualization</label>
+        </div>
+        <div class="form-section">
+          <input type="checkbox" name="user-improve" value="challenges" />
+          <label for="challenges">Challenges</label>
+        </div>
+        <div class="form-section">
+          <input type="checkbox" name="user-improve" value="open-source" />
+          <label for="open-source">Open Source Community</label>
+        </div>
+        <div class="form-section">
+          <input type="checkbox" name="user-improve" value="videos" />
+          <label for="videos">Videos</label>
+        </div>
+        <div class="form-section">
+          <input type="checkbox" name="user-improve" value="wiki" />
+          <label for="wiki">Wiki</label>
+        </div>
+        <div class="form-section">
+          <input type="checkbox" name="user-improve" value="forum" />
+          <label for="forum">Forum</label>
+        </div>
+
+        <label for="suggestion" class="label"
+          >Any comments or suggestions?</label
+        >
+        <textarea id="suggestion" name="suggestion" placeholder="does not work">
+Enter your comment here...
+        </textarea>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
